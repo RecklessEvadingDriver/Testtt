@@ -10,6 +10,7 @@ def get_commands():
         "link": "(Group) Generate a direct link for a file or batch",
         "dc": "Retrieve the data center (DC) information of a user or file",
         "ping": "Check the bot's status and response time",
+        "alive": "Show uptime, version, and service URL",
         "about": "Get information about the bot",
         "help": "Show help and usage instructions",
         "status": "(Admin) View bot details and current workload",

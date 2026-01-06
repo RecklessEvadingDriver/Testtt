@@ -171,6 +171,7 @@ MSG_HELP = (
     "> `/link <num>` 🔗 - (Groups) Generate links. \n"
     "> `/about` ℹ️ - Learn more about me and my features.\n"
     "> `/ping` 📡 - Check my responsiveness and online status.\n"
+    "> `/alive` ✅ - Quick health details (uptime, version, URL).\n"
     "> `/dc` 🌍 - View DC information (for yourself, another user, or a file).\n\n"
     "**💡 Pro Tips:**\n"
     "> • You can forward files from other chats directly to me.\n"
@@ -202,6 +203,12 @@ MSG_PING_RESPONSE = (
     "☁️ **PONG! Bot is Online!** ⚡\n\n"
     "> ⏱️ **Ping:** {time_taken_ms:.2f} ms\n"
     "> 🤖 **Bot Status:** `Active`"
+)
+MSG_ALIVE_STATUS = (
+    "✅ **Thunder is running!**\n\n"
+    "> ⏳ **Uptime:** {uptime}\n"
+    "> 🧭 **Version:** `{version}`\n"
+    "> 🌐 **URL:** {url}"
 )
 
 # ------ DC Info ------
