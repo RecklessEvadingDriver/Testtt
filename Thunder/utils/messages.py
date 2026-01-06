@@ -139,7 +139,7 @@ MSG_BUTTON_CLOSE = "✖ Close"
 
 MSG_WELCOME = (
     "🌟 **Welcome, {user_name}!** 🌟\n\n"
-    "I'm **Thunder File to Link Bot** ⚡\n"
+    "I'm **Exotic Rips** ⚡\n"
     "I generate direct download and streaming links for your files.\n\n"
     "**How to use:**\n"
     "1. Send any file to me for private links.\n"
@@ -149,7 +149,7 @@ MSG_WELCOME = (
 )
 
 MSG_HELP = (
-    "📘 **Thunder Bot - Help Guide** 📖\n\n"
+    "📘 **Exotic Rips - Help Guide** 📖\n\n"
     "How to get direct download & streaming links:\n\n"
     "**🚀 Private Chat (with me):**\n"
     "> 1. Send me **any file** (document, video, audio, photo, etc.).\n"
@@ -182,19 +182,16 @@ MSG_HELP = (
 )
 
 MSG_ABOUT = (
-    "🌟 **About Thunder File to Link Bot** ℹ️\n\n"
-    "I'm your go-to bot for **instant download & streaming!** ⚡\n\n"
-    "**🚀 Key Features:**\n"
-    "> **Instant Links:** Get your links within seconds.\n"
-    "> **Online Streaming:** Watch videos or listen to audio directly (for supported formats).\n"
-    "> **Universal File Support:** Handles documents, videos, audio, photos, and more.\n"
-    "> **High-Speed Access:** Optimized for fast link generation and file access.\n"
-    "> **Secure & Reliable:** Your files are handled with care during processing.\n"
-    "> **User-Friendly Interface:** Designed for ease of use on any device.\n"
-    "> **Efficient Processing:** Built for speed and reliability.\n"
-    "> **Batch Mode:** Process multiple files at once in groups using `/link <number>`.\n"
-    "> **Versatile Usage:** Works in private chats, groups, and channels (with admin setup).\n\n"
-    "💖 If you find me useful, please consider sharing me with your friends!"
+    "🌟 **About Exotic Rips** ℹ️\n\n"
+    "Fast, clean links for **instant download & streaming.** ⚡\n\n"
+    "**🚀 Highlights:**\n"
+    "> **Instant Links:** Seconds from send to share.\n"
+    "> **Online Streaming:** Watch or listen directly.\n"
+    "> **Universal File Support:** Documents, videos, audio, photos, and more.\n"
+    "> **Optimized Performance:** Tuned for speed and reliability.\n"
+    "> **Batch Mode:** `/link <number>` to process multiple files in groups.\n"
+    "> **Versatile Usage:** Private chats, groups, and channels (with admin setup).\n\n"
+    "Share me with your friends if I help you out!"
 )
 
 # ------ Ping ------
@@ -205,7 +202,7 @@ MSG_PING_RESPONSE = (
     "> 🤖 **Bot Status:** `Active`"
 )
 MSG_ALIVE_STATUS = (
-    "✅ **Thunder is running!**\n\n"
+    "✅ **Exotic Rips is running!**\n\n"
     "> ⏳ **Uptime:** {uptime}\n"
     "> 🧭 **Version:** `{version}`\n"
     "> 🌐 **URL:** {url}"

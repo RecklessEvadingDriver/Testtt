@@ -27,7 +27,7 @@ console_handler.setFormatter(formatter)
 listener = QueueListener(log_queue, file_handler, console_handler, respect_handler_level=True)
 listener.start()
 
-logger = logging.getLogger('ThunderBot')
+logger = logging.getLogger('ExoticRipsBot')
 logger.setLevel(logging.INFO)
 logger.propagate = False
 logger.addHandler(QueueHandler(log_queue))
