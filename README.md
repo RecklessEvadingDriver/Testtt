@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/FileToLink/Thunder.jpg" alt="Thunder Logo" width="120">
-  <h1 align="center">⚡ Thunder</h1>
+  <img src="https://cdn.jsdelivr.net/gh/fyaz05/Resources@main/FileToLink/Thunder.jpg" alt="Exotic Rips Logo" width="120">
+  <h1 align="center">⚡ Exotic Rips</h1>
 </p>
 
 <p align="center">
@@ -50,7 +50,7 @@
 
 ## About The Project
 
-**Thunder** is a powerful Telegram bot that transforms Telegram files into high-speed direct links, perfect for both streaming and rapid downloading. Share files via HTTP(S) links without needing to download them from the Telegram client first.
+**Exotic Rips** is a powerful Telegram bot that transforms Telegram files into high-speed direct links, perfect for both streaming and rapid downloading. Share files via HTTP(S) links without needing to download them from the Telegram client first.
 
 ### 💡 Perfect For
 
@@ -135,7 +135,7 @@ Copy `config_sample.env` to `config.env` and fill in your values.
 | `BANNED_CHANNELS` | Blocked channel IDs | *(empty)* |
 | `SLEEP_THRESHOLD` | Client switch threshold | `300` |
 | `WORKERS` | Async workers | `8` |
-| `NAME` | Bot name | `ThunderF2L` |
+| `NAME` | Bot name | `ExoticRips` |
 | `BIND_ADDRESS` | Bind address | `0.0.0.0` |
 | `PING_INTERVAL` | Ping interval (seconds) | `840` |
 | `TOKEN_ENABLED` | Enable tokens | `False` |
@@ -278,7 +278,7 @@ Features include download/upload speeds, latency measurements, and shareable res
 
 ## Deployment Guide
 
-This section covers the complete setup process for deploying Thunder, from prerequisites to production deployment.
+This section covers the complete setup process for deploying Exotic Rips, from prerequisites to production deployment.
 
 ### Prerequisites
 

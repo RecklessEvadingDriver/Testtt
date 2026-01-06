@@ -55,6 +55,10 @@ class Var:
 
     FQDN: str = os.getenv("FQDN", "") or BIND_ADDRESS
     HAS_SSL: bool = str_to_bool(os.getenv("HAS_SSL", "True"))
+    heroku_app = os.getenv("HEROKU_APP_NAME", "").strip()
+    if (not FQDN or FQDN == BIND_ADDRESS) and heroku_app:
+        FQDN = f"{heroku_app}.herokuapp.com"
+        HAS_SSL = True
     PROTOCOL: str = "https" if HAS_SSL else "http"
     PORT_SEGMENT: str = "" if NO_PORT else f":{PORT}"
     URL: str = f"{PROTOCOL}://{FQDN}{PORT_SEGMENT}/"

@@ -153,6 +153,27 @@ async def status_endpoint(request):
     )
 
 
+@routes.get("/health", allow_head=True)
+async def healthcheck(request):
+    uptime = time.time() - StartTime
+    return web.json_response(
+        {
+            "status": "ok",
+            "uptime": get_readable_time(uptime),
+            "version": __version__,
+        },
+        headers={"Access-Control-Allow-Origin": "*"}
+    )
+
+
+@routes.options("/health")
+async def health_options(request: web.Request):
+    return web.Response(headers={
+        **CORS_HEADERS,
+        "Access-Control-Max-Age": "86400"
+    })
+
+
 @routes.options("/status")
 async def status_options(request: web.Request):
     return web.Response(headers={

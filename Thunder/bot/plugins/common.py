@@ -9,6 +9,7 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
                             Message, User)
 
+from Thunder import StartTime, __version__
 from Thunder.bot import StreamBot
 from Thunder.utils.bot_utils import (gen_dc_txt, get_user, log_newusr,
                                      reply_user_err)
@@ -26,9 +27,10 @@ from Thunder.utils.messages import (
     MSG_ERROR_USER_INFO, MSG_FILE_TYPE_ANIMATION, MSG_FILE_TYPE_AUDIO,
     MSG_FILE_TYPE_DOCUMENT, MSG_FILE_TYPE_PHOTO, MSG_FILE_TYPE_STICKER,
     MSG_FILE_TYPE_UNKNOWN, MSG_FILE_TYPE_VIDEO, MSG_FILE_TYPE_VIDEO_NOTE,
-    MSG_FILE_TYPE_VOICE, MSG_HELP, MSG_PING_RESPONSE, MSG_PING_START,
+    MSG_FILE_TYPE_VOICE, MSG_HELP, MSG_PING_RESPONSE, MSG_PING_START, MSG_ALIVE_STATUS,
     MSG_TOKEN_ACTIVATED, MSG_TOKEN_FAILED, MSG_TOKEN_INVALID, MSG_WELCOME
 )
+from Thunder.utils.time_format import get_readable_time
 from Thunder.vars import Var
 
 @StreamBot.on_message(filters.command("start") & filters.private)
@@ -242,6 +244,36 @@ async def dc_command(bot: Client, msg: Message):
         await send_user_dc(msg, msg.from_user)
     else:
         await reply_user_err(msg, MSG_DC_ANON_ERROR)
+
+@StreamBot.on_message(filters.command("alive") & filters.private)
+async def alive_command(bot: Client, msg: Message):
+    if not await check_banned(bot, msg):
+        return
+    if not await force_channel_check(bot, msg):
+        return
+    uptime = get_readable_time(int(time.time() - StartTime))
+    btns = [
+        [InlineKeyboardButton(MSG_BUTTON_GET_HELP, callback_data="help_command"),
+         InlineKeyboardButton(MSG_BUTTON_CLOSE, callback_data="close_panel")]
+    ]
+    text = MSG_ALIVE_STATUS.format(
+        uptime=uptime,
+        version=__version__,
+        url=Var.URL.rstrip("/")
+    )
+    try:
+        await msg.reply_text(
+            text=text,
+            reply_markup=InlineKeyboardMarkup(btns),
+            disable_web_page_preview=True
+        )
+    except FloodWait as e:
+        await asyncio.sleep(e.value)
+        await msg.reply_text(
+            text=text,
+            reply_markup=InlineKeyboardMarkup(btns),
+            disable_web_page_preview=True
+        )
 
 @StreamBot.on_message(filters.command("ping") & filters.private)
 async def ping_command(bot: Client, msg: Message):
